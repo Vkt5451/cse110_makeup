@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+	<title>GloboCorp GPT Genie</title>
+    <link rel="stylesheet" href="style-genie.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>GloboCorp's GPT Genie</h1>
+            <p><em>Tell us your wishes and all of your dreams will come true!</em></p>
+        </header>
+
+        <main class="overlay">
+        <section id="chat">
+            <section id="messages"></section>
+            <section id="chat-input">
+            <span>Your message </span>
+            <input type="text" id="input" placeholder="What are your wishes mighty customer?" onkeypress="if(event.keyCode==13) send()" />
+            <button onclick="send()">Send</button>  
+            </section>
+        </section>
+        </main>
+
+        <script src="script-genie.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+header{
+font-family: Arial;/*The text's font family*/
+margin: 10px;
+text-align:center;/*Alignment of text to center*/
+}
+
+h1{
+color:red; /*Color of the text*/
+font-size: 50px;/*Size of the text*/
+}
+.overlay {
+    position: fixed; /* Keeps it fixed in place*/
+    top: 0; left: 0; /* Starts from the top-left corner of the screen */
+    width: 100vw; /* Width of viewport*/
+    height: 100vh; /* Height of viewport*/
+    background: rgba(0,0,0,0.5);
+    display: flex; /* Flex layout to center contents */
+    justify-content: center;/* Horizontally center contents */
+    align-items: center; /* Vertically center contents */
+}
+
+#chat {
+    width: 650px; /* Width of chat box*/
+    height: 550px; /* Width of chat box*/
+    background: white; /*Background color*/
+    display: flex; /* Flex layout to center contents */
+    flex-direction: column; /* Stack elements vertically */
+    border-radius: 12px; /* Rounds the corners of the input box*/
+    border: 1px solid #ccc;
+    padding: 10px; /* Space within side the chat box*/
+    box-sizing: border-box;
+}
+
+#messages {
+    flex:1; /*fixes input box at bottom of chat box*/
+    overflow-y: auto; /* Enables for scrolling vertically when messages overflow */
+    padding: 8px; /* Space within side the message box*/
+    margin-bottom: 10px; /* Space between messages box and input*/
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    gap: 6px;               /* space between messages */
+}
+
+#chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+#input {
+    flex: 1; /*Enables user to expand space*/
+    border-radius: 12px; /*Rounds the corners of the input box*/
+    font-size: 15px;  /* Sets the font size of the input text */
+}
+
+button {
+    padding: 15px; /* Space within side the box*/
+    border-radius: 12px; /*Rounds the corners of the input box*/
+    color:white;/*Color of the button's text*/
+    background-color: lightblue;   /* Button background color */
+}
+
+.message {
+  display: inline-block;        /* Make message size shrink to content */
+  max-width: 70%;               /* Limit max width so bubbles don’t get too wide */
+  padding: 20px 12px;
+  margin: 5px 0;
+  border-radius: 15px;
+  word-wrap: break-word;        /* Break long words if needed */
+}
+
+.user {
+  background: lightblue; /*Color of background of text bubble*/
+  text-align: right;
+  align-self: flex-end;         /* Align user message to right */
+}
+
+.bot {
+  background: lightgray; /*Color of background of text bubble*/
+  text-align: left;
+  align-self: flex-start;       /* Align bot message to left */
+}
