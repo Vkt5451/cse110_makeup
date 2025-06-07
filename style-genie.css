@@ -1,11 +1,22 @@
+:root{
+--header-color: red;
+--font-for-header: Arial;
+--user-message-background-color: lightblue;
+--bot-message-background-color: lightgrey;
+--button-background-color: lightblue;
+--button-text-color: white;
+--chat-background-color:white;
+}
+
+
 header{
-font-family: Arial;/*The text's font family*/
+font-family: var(--font-for-header);/*The text's font family*/
 margin: 10px;
 text-align:center;/*Alignment of text to center*/
 }
 
 h1{
-color:red; /*Color of the text*/
+color: var(--header-color); /*Color of the text*/
 font-size: 50px;/*Size of the text*/
 }
 .overlay {
@@ -22,7 +33,7 @@ font-size: 50px;/*Size of the text*/
 #chat {
     width: 650px; /* Width of chat box*/
     height: 550px; /* Width of chat box*/
-    background: white; /*Background color*/
+    background: var(--chat-background-color); /*Background color*/
     display: flex; /* Flex layout to center contents */
     flex-direction: column; /* Stack elements vertically */
     border-radius: 12px; /* Rounds the corners of the input box*/
@@ -55,8 +66,8 @@ font-size: 50px;/*Size of the text*/
 button {
     padding: 15px; /* Space within side the box*/
     border-radius: 12px; /*Rounds the corners of the input box*/
-    color:white;/*Color of the button's text*/
-    background-color: lightblue;   /* Button background color */
+    color:var(--button-text-color);/*Color of the button's text*/
+    background-color: var(--button-background-color);   /* Button background color */
 }
 
 .message {
@@ -69,13 +80,13 @@ button {
 }
 
 .user {
-  background: lightblue; /*Color of background of text bubble*/
+  background: var(--user-message-background-color); /*Color of background of text bubble*/
   text-align: right;
   align-self: flex-end;         /* Align user message to right */
 }
 
 .bot {
-  background: lightgray; /*Color of background of text bubble*/
+  background: var(--bot-message-background-color); /*Color of background of text bubble*/
   text-align: left;
   align-self: flex-start;       /* Align bot message to left */
 }
